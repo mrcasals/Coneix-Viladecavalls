@@ -3,5 +3,8 @@ Patrimonivila::Application.routes.draw do
 
   resources :locations, only: :index
 
+  namespace :admin do
+    resources :locations
+  end
   root to: "locations#index"
 end
