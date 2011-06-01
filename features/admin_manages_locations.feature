@@ -8,7 +8,7 @@ Feature: Admin manages locations
 
   Scenario: An admin lists all the locations
     Given a location exists
-    When I am on the locations list
+    When I am on the admin locations list
     Then I should see the location
 
   Scenario: An admin adds a location
@@ -17,15 +17,15 @@ Feature: Admin manages locations
     Then I should see the location within the locations list
 
   Scenario: An admin edits a location
-    Given I am on the location page
+    Given I am on the location edition page
     When I modify the location data
     Then I should see a confirmation message telling me that the data was successfully updated
     And I should see the modifications in the location page
 
   Scenario: An admin deletes a location
     Given a location exists
-    And I am on the locations list
+    And I am on the admin locations list
     When I delete a location
     Then I should see a confirmation message telling me that the location was successfully deleted
-    And I should not see the location within the locations list
+    And I should not see the location within the admin locations list
 

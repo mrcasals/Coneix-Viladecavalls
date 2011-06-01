@@ -11,11 +11,11 @@ Given /^I am on the location creation page$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Given /^I am on the location page$/ do
+Given /^I am on the location edition page$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-When /^I am on the locations list$/ do
+When /^I am on the admin locations list$/ do
   pending # express the regexp above with the code you wish you had
 end
 
@@ -51,6 +51,6 @@ Then /^I should see a confirmation message telling me that the location was succ
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should not see the location within the locations list$/ do
+Then /^I should not see the location within the admin locations list$/ do
   pending # express the regexp above with the code you wish you had
 end
