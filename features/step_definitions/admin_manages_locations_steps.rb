@@ -8,15 +8,15 @@ Given /^a location exists$/ do
 end
 
 Given /^I am on the location creation page$/ do
-  pending # express the regexp above with the code you wish you had
+  visit new_admin_location_path
 end
 
 Given /^I am on the location edition page$/ do
-  pending # express the regexp above with the code you wish you had
+  visit edit_admin_location_path(@current_location)
 end
 
 When /^I am on the admin locations list$/ do
-  pending # express the regexp above with the code you wish you had
+  visit admin_locations_path
 end
 
 When /^I fill in the form with the location data$/ do
