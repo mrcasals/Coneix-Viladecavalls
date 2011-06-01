@@ -22,7 +22,7 @@ Spork.prefork do
 
   ActionController::Base.allow_rescue = false
 
-  DatabaseCleaner.strategy = :transaction
+  DatabaseCleaner.strategy = :truncation
 
   include Warden::Test::Helpers
   After{ Warden.test_reset! }
