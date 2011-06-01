@@ -1,10 +1,10 @@
 class CreateLocations < ActiveRecord::Migration
   def change
     create_table :locations do |t|
-      t.name :string
-      t.description :text
-      t.lat :float
-      t.long :float
+      t.string :name
+      t.text :description
+      t.float :lat
+      t.float :long
 
       t.timestamps
     end

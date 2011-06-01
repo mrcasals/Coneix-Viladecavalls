@@ -4,7 +4,7 @@ Given /^I am logged in as an admin$/ do
 end
 
 Given /^a location exists$/ do
-  pending # express the regexp above with the code you wish you had
+  @current_location = Location.make!
 end
 
 Given /^I am on the location creation page$/ do
