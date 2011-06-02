@@ -27,8 +27,10 @@ When /^I modify the location data$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-When /^I delete a location$/ do
-  pending # express the regexp above with the code you wish you had
+When /^I delete the location$/ do
+  within '#locations-list' do
+    click_link '.destroy'
+  end
 end
 
 Then /^I should see the location within the locations list$/ do

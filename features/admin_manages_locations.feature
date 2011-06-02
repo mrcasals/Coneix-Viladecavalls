@@ -26,7 +26,7 @@ Feature: Admin manages locations
   Scenario: An admin deletes a location
     Given a location exists
     And I am on the admin locations list
-    When I delete a location
+    When I delete the location
     Then I should see a confirmation message telling me that the location was successfully deleted
     And I should not see the location within the admin locations list
 

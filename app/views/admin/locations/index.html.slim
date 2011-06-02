@@ -9,5 +9,5 @@ table#locations-list
       tr id="#{location.id}"
         td=link_to location.name, admin_location_path(location)
         td.options
-          =link_to t('simple_form.labels.locations.edit'), edit_admin_location_path(location)
-          =link_to t('simple_form.labels.locations.destroy'), admin_location_path(location), confirm: t('simple_form.labels.locations.destroy_confirmation'), method: :delete
+          =link_to t('simple_form.labels.locations.edit'), edit_admin_location_path(location), class: "edit"
+          =link_to t('simple_form.labels.locations.destroy'), admin_location_path(location), confirm: t('simple_form.labels.locations.destroy_confirmation'), method: :delete, class: "destroy"
