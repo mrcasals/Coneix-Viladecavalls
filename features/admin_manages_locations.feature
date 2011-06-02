@@ -17,7 +17,8 @@ Feature: Admin manages locations
     Then I should see the location within the locations list
 
   Scenario: An admin edits a location
-    Given I am on the location edition page
+    Given a location exists
+    And I am on the location edition page
     When I modify the location data
     Then I should see a confirmation message telling me that the data was successfully updated
     And I should see the modifications in the location page
