@@ -31,12 +31,10 @@ When /^I delete a location$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should see the location$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
 Then /^I should see the location within the locations list$/ do
-  pending # express the regexp above with the code you wish you had
+  within '#locations-list' do
+    page.has_content?(@current_location.name).must_equal true
+  end
 end
 
 Then /^I should see a confirmation message telling me that the data was successfully updated$/ do

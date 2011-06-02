@@ -5,6 +5,12 @@ gem 'devise'
 gem 'sqlite3'
 gem 'inherited_resources'
 
+#Templating
+gem 'slim'
+gem 'slim-rails'
+gem 'compass'
+gem 'sass'
+
 gem 'therubyracer-heroku', group: [:production]
 gem 'pg', group: [:production]
 gem 'yard', group: [:development]

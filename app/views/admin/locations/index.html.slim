@@ -1,0 +1,13 @@
+h2=t '.locations'
+
+table#locations-list
+  thead
+    th=t'activerecord.attributes.location.name'
+    th
+  tbody
+    -collection.each do |location|
+      tr id="#{location.id}"
+        td=link_to location.name, admin_location_path(location)
+        td.options
+          =link_to t('simple_form.labels.locations.edit'), edit_admin_location_path(location)
+          =link_to t('simple_form.labels.locations.destroy'), admin_location_path(location), confirm: t('simple_form.labels.locations.destroy_confirmation'), method: :delete

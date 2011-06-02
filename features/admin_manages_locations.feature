@@ -9,7 +9,7 @@ Feature: Admin manages locations
   Scenario: An admin lists all the locations
     Given a location exists
     When I am on the admin locations list
-    Then I should see the location
+    Then I should see the location within the locations list
 
   Scenario: An admin adds a location
     Given I am on the location creation page
