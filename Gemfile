@@ -4,6 +4,7 @@ gem 'rails', '3.1.0.rc1'
 gem 'devise'
 gem 'sqlite3'
 gem 'inherited_resources'
+gem 'simple_form'
 
 #Templating
 gem 'slim'

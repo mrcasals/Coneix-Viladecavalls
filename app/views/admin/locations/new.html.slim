@@ -1,0 +1,8 @@
+h2=t '.new_location'
+
+=simple_form_for @location do |form|
+  =form.input :name
+  =form.input :description
+  =form.input :lat
+  =form.input :long
+  =form.submit t('simple_form.actions.submit')

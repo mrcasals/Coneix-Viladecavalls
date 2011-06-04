@@ -1,4 +1,4 @@
 class Admin::LocationsController < Admin::ApplicationController
   inherit_resources
-  actions :index
+  actions :index, :create, :new
 end

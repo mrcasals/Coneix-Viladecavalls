@@ -20,7 +20,12 @@ When /^I am on the admin locations list$/ do
 end
 
 When /^I fill in the form with the location data$/ do
-  pending # express the regexp above with the code you wish you had
+  fill_in 'location_name', with: 'Sant Miquel de Toudell'
+  fill_in 'location_description', with: 'This Romanesque church was built in the 12th century.'
+  fill_in 'location_lat', with: '1.987654321'
+  fill_in 'location_long', with: '42.12345678'
+  save_and_open_page
+  click_button 'new_location_commit'
 end
 
 When /^I modify the location data$/ do
