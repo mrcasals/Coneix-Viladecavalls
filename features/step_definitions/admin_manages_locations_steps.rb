@@ -38,9 +38,15 @@ When /^I delete the location$/ do
   end
 end
 
-Then /^I should see the location within the locations list$/ do
+Then /^I should see the location$/ do
   within '#locations-list' do
     page.has_content?(@current_location.name).must_equal true
+  end
+end
+
+Then /^I should see the location within the locations list$/ do
+  within '#locations-list' do
+    page.has_content?('Sant Miquel de Toudell').must_equal true
   end
 end
 
