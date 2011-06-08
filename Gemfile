@@ -11,6 +11,8 @@ gem 'slim'
 gem 'slim-rails'
 gem 'compass'
 gem 'sass'
+gem 'button_form'
+gem 'flash_messages_helper'
 
 gem 'therubyracer-heroku', group: [:production]
 gem 'pg', group: [:production]

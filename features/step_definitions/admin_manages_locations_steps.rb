@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 Given /^I am logged in as an admin$/ do
   @current_user = User.make!(:admin)
   login_as @current_user
@@ -24,11 +26,12 @@ When /^I fill in the form with the location data$/ do
   fill_in 'location_description', with: 'This Romanesque church was built in the 12th century.'
   fill_in 'location_lat', with: '1.987654321'
   fill_in 'location_long', with: '42.12345678'
-  click_button 'new_location_commit'
+  find('form button[type=submit]').click
 end
 
 When /^I modify the location data$/ do
-  pending # express the regexp above with the code you wish you had
+  fill_in 'location_name', with: 'Església de Sant Miquel de Toudell'
+  find('form button[type=submit]').click
 end
 
 When /^I delete the location$/ do
@@ -50,11 +53,13 @@ Then /^I should see the location within the locations list$/ do
 end
 
 Then /^I should see a confirmation message telling me that the data was successfully updated$/ do
-  pending # express the regexp above with the code you wish you had
+  must_have_confirmation_message
 end
 
 Then /^I should see the modifications in the location page$/ do
-  pending # express the regexp above with the code you wish you had
+  within 'table#locations-list' do
+    page.has_content?('Església de Sant Miquel de Toudell').must_equal true
+  end
 end
 
 Then /^I should see a confirmation message telling me that the location was successfully deleted$/ do
