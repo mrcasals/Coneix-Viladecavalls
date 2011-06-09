@@ -13,6 +13,7 @@ gem 'compass'
 gem 'sass'
 gem 'button_form'
 gem 'flash_messages_helper'
+gem 'show_for'
 
 gem 'therubyracer-heroku', group: [:production]
 gem 'pg', group: [:production]

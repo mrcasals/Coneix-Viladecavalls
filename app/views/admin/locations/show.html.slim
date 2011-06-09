@@ -1,0 +1,8 @@
+#location
+  h2= @location.name
+
+  =show_for @location do |l|
+    =l.attribute :name
+    =l.attribute :description
+    =l.attribute :lat
+    =l.attribute :long

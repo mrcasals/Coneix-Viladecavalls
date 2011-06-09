@@ -35,8 +35,8 @@ When /^I modify the location data$/ do
 end
 
 When /^I delete the location$/ do
-  within '#locations-list' do
-    click_link '.destroy'
+  within "#location-#{@current_location.id}" do
+    click_link I18n.t('simple_form.actions.destroy')
   end
 end
 
@@ -46,8 +46,8 @@ Then /^I should see the location$/ do
   end
 end
 
-Then /^I should see the location within the locations list$/ do
-  within '#locations-list' do
+Then /^I should see the location data$/ do
+  within '#location' do
     page.has_content?('Sant Miquel de Toudell').must_equal true
   end
 end
@@ -57,15 +57,17 @@ Then /^I should see a confirmation message telling me that the data was successf
 end
 
 Then /^I should see the modifications in the location page$/ do
-  within 'table#locations-list' do
+  within '#location' do
     page.has_content?('Església de Sant Miquel de Toudell').must_equal true
   end
 end
 
 Then /^I should see a confirmation message telling me that the location was successfully deleted$/ do
-  pending # express the regexp above with the code you wish you had
+  must_have_confirmation_message
 end
 
 Then /^I should not see the location within the admin locations list$/ do
-  pending # express the regexp above with the code you wish you had
+  within '#locations-list' do
+    page.has_content?(@current_location.name).must_equal false
+  end
 end

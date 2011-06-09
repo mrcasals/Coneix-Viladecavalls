@@ -6,8 +6,8 @@ table#locations-list
     th
   tbody
     -collection.each do |location|
-      tr id="#{location.id}"
+      tr id="location-#{location.id}"
         td=link_to location.name, admin_location_path(location)
         td.options
           =link_to t('simple_form.labels.locations.edit'), edit_admin_location_path(location), class: "edit"
-          =link_to t('simple_form.labels.locations.destroy'), admin_location_path(location), confirm: t('simple_form.labels.locations.destroy_confirmation'), method: :delete, class: "destroy"
+          =link_to t('simple_form.actions.destroy'), admin_location_path(location), confirm: t('simple_form.actions.destroy_confirmation'), method: :delete, class: "destroy"

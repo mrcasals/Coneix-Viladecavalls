@@ -22,5 +22,9 @@ en:
     #   username: 'User name to sign in.'
     #   password: 'No special characters, please.'
 
+    labels:
+      locations:
     actions:
+      destroy: Destroy
+      destroy_confirmation: Are you sure?
       submit: Submit

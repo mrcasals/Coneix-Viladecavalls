@@ -14,7 +14,7 @@ Feature: Admin manages locations
   Scenario: An admin adds a location
     Given I am on the location creation page
     When I fill in the form with the location data
-    Then I should see the location within the locations list
+    Then I should see the location data
 
   Scenario: An admin edits a location
     Given a location exists
