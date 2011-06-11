@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id='container'>
+    <% if !(@flash_messages = flash_messages).blank? %>
+      <div id='flash-messages'>
+        <%= @flash_messages %>
+      </div>
+    <% end %>
+    <div id='content'>
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>
